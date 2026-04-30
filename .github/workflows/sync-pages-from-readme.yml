@@ -29,8 +29,23 @@ jobs:
           {
             echo '<!-- AUTO-GENERATED FILE: do not edit docs/index.md directly. -->'
             echo '<!-- Edit README.md, then this file is synchronized by GitHub Actions. -->'
+            echo '<!-- markdownlint-disable MD041 -->'
             echo ''
-            awk '/<!-- PAGES-SKIP-START -->/{exit} /\[Contribuer\]|\[GitHub Pages\]/{next} {print}' README.md
+            echo '<!-- markdownlint-disable MD033 -->'
+            echo '<style>'
+            echo '  .site-footer {'
+            echo '    display: none;'
+            echo '  }'
+            echo '</style>'
+            echo '<!-- markdownlint-enable MD033 -->'
+            echo ''
+            awk '
+              /^# / && !title_skipped { title_skipped=1; next }
+              title_skipped && !leading_blank_skipped && /^$/ { leading_blank_skipped=1; next }
+              /<!-- PAGES-SKIP-START -->/{exit}
+              /\[Awesome Weather\]|\[Contribuer\]|\[GitHub Pages\]/{next}
+              {print}
+            ' README.md | sed 's/^  - /- /'
             echo ''
             echo '<!-- markdownlint-disable MD033 -->'
             echo '<script>'

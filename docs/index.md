@@ -1,7 +1,14 @@
 <!-- AUTO-GENERATED FILE: do not edit docs/index.md directly. -->
 <!-- Edit README.md, then this file is synchronized by GitHub Actions. -->
+<!-- markdownlint-disable MD041 -->
 
-# Awesome Weather
+<!-- markdownlint-disable MD033 -->
+<style>
+  .site-footer {
+    display: none;
+  }
+</style>
+<!-- markdownlint-enable MD033 -->
 
 ![Banniere Awesome Weather](assets/img/cover.webp)
 
@@ -18,15 +25,14 @@ modèles, outils open source, données et références.
 
 ## Sommaire
 
-- [Awesome Weather](#awesome-weather)
-  - [Sommaire](#sommaire)
-  - [Institutions et Prévisions Officielles](#institutions-et-prévisions-officielles)
-  - [Modèles Numériques et Analyse](#modèles-numériques-et-analyse)
-  - [Orages et Phénomènes Sévères](#orages-et-phénomènes-sévères)
-  - [Visualisation Interactive](#visualisation-interactive)
-  - [Satellite et Radar](#satellite-et-radar)
-  - [APIs et Données pour Développeurs](#apis-et-données-pour-développeurs)
-  - [Licence](#licence)
+- [Sommaire](#sommaire)
+- [Institutions et Prévisions Officielles](#institutions-et-prévisions-officielles)
+- [Modèles Numériques et Analyse](#modèles-numériques-et-analyse)
+- [Orages et Phénomènes Sévères](#orages-et-phénomènes-sévères)
+- [Visualisation Interactive](#visualisation-interactive)
+- [Satellite et Radar](#satellite-et-radar)
+- [APIs et Données pour Développeurs](#apis-et-données-pour-développeurs)
+- [Licence](#licence)
 
 ---
 
