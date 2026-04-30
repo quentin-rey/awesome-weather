@@ -24,11 +24,13 @@ jobs:
       - name: Generate docs/index.md from README.md
         run: |
           mkdir -p docs
+          cp -r assets docs/
+          cp LICENSE docs/LICENSE
           {
             echo '<!-- AUTO-GENERATED FILE: do not edit docs/index.md directly. -->'
             echo '<!-- Edit README.md, then this file is synchronized by GitHub Actions. -->'
             echo ''
-            sed 's|(assets/|(..\/assets/|g; s|(LICENSE)|(..\/LICENSE)|g' README.md
+            awk '/<!-- PAGES-SKIP-START -->/{exit} /\[Contribuer\]|\[GitHub Pages\]/{next} {print}' README.md
           } > docs/index.md
 
       - name: Commit and push if changed

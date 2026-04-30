@@ -23,8 +23,8 @@ modèles, outils open source, données et références.
   - [Visualisation Interactive](#visualisation-interactive)
   - [Satellite et Radar](#satellite-et-radar)
   - [APIs et Données pour Développeurs](#apis-et-données-pour-développeurs)
-  - [Contribuer](#contribuer)
   - [Licence](#licence)
+  - [Contribuer](#contribuer)
   - [GitHub Pages](#github-pages)
 
 ---
@@ -79,36 +79,6 @@ modèles, outils open source, données et références.
 - [Météo-France Open Data][mf-opendata] - Données publiques officielles.
 - [Pirate Weather][pirate-weather] - API compatible format Dark Sky.
 
----
-
-## Contribuer
-
-Les contributions sont les bienvenues. Si vous souhaitez ajouter une
-ressource, vous pouvez ouvrir une Issue ou une Pull Request sur ce repository.
-
-Format recommandé pour une nouvelle ressource :
-
-- Nom du service
-- URL
-- Catégorie
-- Gratuit / payant
-- Zone couverte
-
-## Licence
-
-Ce projet est sous licence [CC0 1.0 Universal](LICENSE).
-
----
-
-## GitHub Pages
-
-Ce README est la source de vérité. La page web est générée
-automatiquement dans `docs/index.md` via GitHub Actions à chaque
-modification de `README.md`.
-
-- Ne pas modifier `docs/index.md` directement.
-- Workflow : `.github/workflows/sync-pages-from-readme.yml`
-
 [meteofrance]: https://meteofrance.com
 [vigilance-meteo]: https://vigilance.meteofrance.fr/fr
 [wmo]: https://worldweather.wmo.int/fr/home.html
@@ -129,3 +99,34 @@ modification de `README.md`.
 [open-meteo]: https://open-meteo.com
 [mf-opendata]: https://meteo.data.gouv.fr
 [pirate-weather]: https://pirateweather.net
+
+## Licence
+
+Ce projet est sous licence [CC0 1.0 Universal](LICENSE).
+<!-- PAGES-SKIP-START -->
+
+---
+
+## Contribuer
+
+Les contributions sont les bienvenues. Si vous souhaitez ajouter une
+ressource, vous pouvez ouvrir une Issue ou une Pull Request sur ce repository.
+
+Format recommandé pour une nouvelle ressource :
+
+- Nom du service
+- URL
+- Catégorie
+- Gratuit / payant
+- Zone couverte
+
+---
+
+## GitHub Pages
+
+Ce README est la source de vérité. La page web est générée
+automatiquement dans `docs/index.md` via GitHub Actions à chaque
+modification de `README.md`.
+
+- Ne pas modifier `docs/index.md` directement.
+- Workflow : `.github/workflows/sync-pages-from-readme.yml`
