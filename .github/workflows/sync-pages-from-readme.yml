@@ -31,6 +31,17 @@ jobs:
             echo '<!-- Edit README.md, then this file is synchronized by GitHub Actions. -->'
             echo ''
             awk '/<!-- PAGES-SKIP-START -->/{exit} /\[Contribuer\]|\[GitHub Pages\]/{next} {print}' README.md
+            echo ''
+            echo '<!-- markdownlint-disable MD033 -->'
+            echo '<script>'
+            echo "document.addEventListener('DOMContentLoaded', function () {"
+            echo "  document.querySelectorAll('a[href^=\"http\"]').forEach(function (link) {"
+            echo "    link.setAttribute('target', '_blank');"
+            echo "    link.setAttribute('rel', 'noopener noreferrer');"
+            echo '  });'
+            echo '});'
+            echo '</script>'
+            echo '<!-- markdownlint-enable MD033 -->'
           } > docs/index.md
 
       - name: Commit and push if changed

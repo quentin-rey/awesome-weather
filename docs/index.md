@@ -104,3 +104,14 @@ modèles, outils open source, données et références.
 ## Licence
 
 Ce projet est sous licence [CC0 1.0 Universal](LICENSE).
+
+<!-- markdownlint-disable MD033 -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('a[href^="http"]').forEach(function (link) {
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noopener noreferrer');
+  });
+});
+</script>
+<!-- markdownlint-enable MD033 -->
