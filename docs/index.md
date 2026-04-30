@@ -4,7 +4,10 @@
 
 <!-- markdownlint-disable MD033 -->
 <style>
-  .site-footer {
+  .footer {
+    display: none;
+  }
+  .container-lg > h1 {
     display: none;
   }
 </style>
