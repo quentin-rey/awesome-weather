@@ -1,6 +1,9 @@
+<!-- AUTO-GENERATED FILE: do not edit docs/index.md directly. -->
+<!-- Edit README.md, then this file is synchronized by GitHub Actions. -->
+
 # Awesome Weather
 
-![Banniere Awesome Weather](assets/img/cover.webp)
+![Banniere Awesome Weather](../assets/img/cover.webp)
 
 Une liste soigneusement selectionnée de ressources météo : APIs, visualisations,
 modèles, outils open source, données et références.
@@ -25,7 +28,6 @@ modèles, outils open source, données et références.
   - [APIs et Données pour Développeurs](#apis-et-données-pour-développeurs)
   - [Contribuer](#contribuer)
   - [Licence](#licence)
-  - [GitHub Pages](#github-pages)
 
 ---
 
@@ -96,18 +98,7 @@ Format recommandé pour une nouvelle ressource :
 
 ## Licence
 
-Ce projet est sous licence [CC0 1.0 Universal](LICENSE).
-
----
-
-## GitHub Pages
-
-Ce README est la source de vérité. La page web est générée
-automatiquement dans `docs/index.md` via GitHub Actions à chaque
-modification de `README.md`.
-
-- Ne pas modifier `docs/index.md` directement.
-- Workflow : `.github/workflows/sync-pages-from-readme.yml`
+Ce projet est sous licence [CC0 1.0 Universal](../LICENSE).
 
 [meteofrance]: https://meteofrance.com
 [vigilance-meteo]: https://vigilance.meteofrance.fr/fr
