@@ -24,11 +24,16 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Link Checker
+        # bdiff.agriculture.gouv.fr is excluded: its certificate (HARICA/GEANT)
+        # is valid but not recognized by the CA bundle embedded in this
+        # action, causing a false-positive SSL failure. Verify manually if
+        # this exclusion is ever revisited.
         uses: lycheeverse/lychee-action@v2
         with:
           args: >
             --verbose
             --no-progress
             --accept 200,403,429
+            --exclude 'bdiff\.agriculture\.gouv\.fr'
             README.md guides
           fail: true
