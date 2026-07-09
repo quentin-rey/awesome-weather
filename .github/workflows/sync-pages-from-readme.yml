@@ -50,8 +50,13 @@ jobs:
               title_skipped && !leading_blank_skipped && /^$/ { leading_blank_skipped=1; next }
               /<!-- PAGES-SKIP-START -->/{exit}
               /\[Awesome Weather\]|\[Contribuer\]|\[GitHub Pages\]/{next}
-              {print}
-            ' README.md | sed 's/^  - /- /'
+              {
+                if ($0 ~ /^## Sommaire/) { in_toc=1 }
+                else if ($0 ~ /^## /) { in_toc=0 }
+                if (in_toc && $0 ~ /^  - /) { sub(/^  - /, "- ") }
+                print
+              }
+            ' README.md
             echo ''
             echo '<!-- markdownlint-disable MD033 -->'
             echo '<script>'
