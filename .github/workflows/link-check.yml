@@ -1,0 +1,34 @@
+name: Check Links
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - README.md
+      - guides/**
+  pull_request:
+    paths:
+      - README.md
+      - guides/**
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+jobs:
+  linkcheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Link Checker
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >
+            --verbose
+            --no-progress
+            --accept 200,403,429
+            README.md guides
+          fail: true

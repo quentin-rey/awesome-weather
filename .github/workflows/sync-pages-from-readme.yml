@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - README.md
+      - guides/**
   workflow_dispatch:
 
 permissions:
@@ -26,6 +27,8 @@ jobs:
           mkdir -p docs
           cp -r assets docs/
           cp LICENSE docs/LICENSE
+          rm -rf docs/guides
+          if [ -d guides ]; then cp -r guides docs/guides; fi
           {
             echo '<!-- AUTO-GENERATED FILE: do not edit docs/index.md directly. -->'
             echo '<!-- Edit README.md, then this file is synchronized by GitHub Actions. -->'
@@ -64,13 +67,14 @@ jobs:
 
       - name: Commit and push if changed
         run: |
-          if git diff --quiet -- docs/index.md; then
+          git add docs/index.md
+          if [ -d docs/guides ]; then git add docs/guides; fi
+          if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/index.md
           git commit -m "chore: sync docs/index.md from README.md"
           git push
