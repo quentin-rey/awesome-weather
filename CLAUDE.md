@@ -29,3 +29,13 @@ Awesome Weather is a curated "awesome list" (no application code) of weather-rel
 - Each entry follows the existing format: `[Name][ref-key] - Description. *Pricing · Coverage*`, with reference-style links collected at the bottom of the relevant README section.
 - Keep the table of contents in `README.md` in sync with section headers when adding/renaming a section.
 - Respect `<!-- PAGES-SKIP-START -->` — content after it (Contribuer/GitHub Pages sections) is intentionally excluded from the generated Pages site.
+
+## Workflow git
+
+Règles générales dans `~/.claude/CLAUDE.md`. Pour ce dépôt, `main` est la branche de production : un push peut déclencher une mise en ligne, et GitHub ne la protège pas (offre gratuite, dépôt privé).
+
+- Jamais de commit ni de push direct sur `main`, jamais de force-push.
+- Une branche par sujet depuis `origin/main` à jour : `git switch -c <type>/<sujet> origin/main`.
+- `git add <fichiers>` uniquement, jamais `git add -A` ni `git add .`. Un worktree par session si plusieurs sessions travaillent ici.
+- Livraison par pull request (`gh pr create --base main`). Ne pas fusionner sans l'accord explicite de Quentin.
+- Demander confirmation avant tout `git push`.
